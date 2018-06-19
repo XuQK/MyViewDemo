@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -260,7 +261,10 @@ public class ScrollNumberView extends View {
         return mCurrentNumber == null ? "0" : mCurrentNumber;
     }
 
-    public void setCurrentNumber(String currentNumber, boolean animate) {
+    public void setCurrentNumber(@NonNull String currentNumber, boolean animate) {
+        if (currentNumber.isEmpty()) {
+            currentNumber = "0";
+        }
         if (mTimePassed < duration) {
             mTimePassed = duration;
             postInvalidate();
