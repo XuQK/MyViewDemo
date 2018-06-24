@@ -1,36 +1,27 @@
-package com.github.xuqk.myviewdemo.fragment;
+package com.github.xuqk.myviewdemo;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.LayoutInflater;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.OvershootInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.github.xuqk.myviewdemo.R;
 import com.github.xuqk.myviewdemo.like.ScrollNumberView;
 import com.github.xuqk.myviewdemo.like.ThumbButton;
 
 /**
- * ClassName: LikeFragment <br/>
- * PackageName: com.github.xuqk.myviewdemo.fragment <br/>
+ * ClassName: LikeActivity <br/>
+ * PackageName: com.github.xuqk.myviewdemo <br/>
  * ProjectName: MyViewDemo <br/>
- * Create On: 6/19/18 7:29 PM <br/>
+ * Create On: 6/24/18 3:40 PM <br/>
  * Site: http://www.zhenhao.com.cn <br/>
  *
  * @author: 徐乾琨 <br/>
  */
 
-public class LikeFragment extends Fragment {
-
-    private static final String TAG = "LikeFragment";
+public class LikeActivity extends AppCompatActivity {
 
     private ThumbButton mThumbButton;
     private ScrollNumberView mScrollNumberView;
@@ -38,20 +29,16 @@ public class LikeFragment extends Fragment {
     private EditText mEditText;
     private Button mButton;
 
-    public static LikeFragment newInstance() {
-        return new LikeFragment();
-    }
-
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_like, container, false);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_like);
 
-        mThumbButton = view.findViewById(R.id.thumb_like);
-        mScrollNumberView = view.findViewById(R.id.number_like);
-        mBtnLike = view.findViewById(R.id.btn_like);
-        mEditText = view.findViewById(R.id.et_like_number);
-        mButton = view.findViewById(R.id.btn_set_like_number);
+        mThumbButton = findViewById(R.id.thumb_like);
+        mScrollNumberView = findViewById(R.id.number_like);
+        mBtnLike = findViewById(R.id.btn_like);
+        mEditText = findViewById(R.id.et_like_number);
+        mButton = findViewById(R.id.btn_set_like_number);
 
         mBtnLike.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +59,5 @@ public class LikeFragment extends Fragment {
                 mScrollNumberView.setCurrentNumber(mEditText.getText().toString(), true);
             }
         });
-
-        return view;
     }
 }

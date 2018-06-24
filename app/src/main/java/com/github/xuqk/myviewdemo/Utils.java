@@ -1,6 +1,7 @@
-package com.github.xuqk.myviewdemo.like;
+package com.github.xuqk.myviewdemo;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
 
 /**
  * ClassName: Utils <br/>
@@ -28,5 +29,15 @@ public class Utils {
 
     public static int pxToDpCeilInt(Context context, float px) {
         return (int) (pxToDp(context, px) + 0.5f);
+    }
+
+    /**
+     * 获取屏幕宽度
+     * @param context
+     * @return
+     */
+    public static int getScreenWidth(Context context) {
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+        return displayMetrics.widthPixels;
     }
 }

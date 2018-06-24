@@ -6,4 +6,17 @@
         <attr name="maxCount" format="integer">4</attr>
         <attr name="number" format="string">0</attr>
     </declare-styleable>
+    
+    <declare-styleable name="RulerView">
+        <attr name="upper_limit" format="integer">200</attr>
+        <attr name="lower_limit" format="integer">40</attr>
+        <attr name="default_mark" format="integer">60</attr>
+        <attr name="ruler_background_color" format="color">#FFFFFFFF</attr>
+        <attr name="scale_color" format="color">#FF000000</attr>
+        <attr name="scale_text_color" format="color">#FFFF0000</attr>
+        <attr name="scale_text_size" format="dimension">16sp</attr>
+        <attr name="current_scale_text_color" format="color">#FFFF0000</attr>
+        <attr name="current_scale_text_size" format="dimension">20sp</attr>
+        <attr name="gap_text_to_ruler" format="dimension">12dp</attr>
+    </declare-styleable>
 </resources>
