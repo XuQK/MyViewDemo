@@ -121,11 +121,6 @@ public class FlipboardView extends View {
         canvas.save();
     }
 
-    private void drawRotationMotion(Canvas canvas) {
-
-
-    }
-
     private void initAnim() {
         mAnimator0 = ValueAnimator.ofInt(0, 60);
         mAnimator0.setDuration(600);
