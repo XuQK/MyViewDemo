@@ -5,4 +5,12 @@ HenCoder 家庭作业。
 
 1. 即刻点赞效果
 
-![点赞效果图](https://github.com/XuQK/MyViewDemo/blob/9cfbe7b522ff6ac6ae2599e1453793d583252970/extra_assets/like.gif)
+![点赞效果图](https://raw.githubusercontent.com/XuQK/MyViewDemo/master/extra_assets/like.gif)
+
+2. 薄荷直尺滚动效果
+
+![薄荷直尺效果图](https://raw.githubusercontent.com/XuQK/MyViewDemo/master/extra_assets/ruler.gif)
+
+1. Flipborad翻页效果增强版
+
+![FlipBorad翻页效果图](https://raw.githubusercontent.com/XuQK/MyViewDemo/master/extra_assets/flip.gif)
