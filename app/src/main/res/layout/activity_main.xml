@@ -21,4 +21,11 @@
         android:textSize="24sp"
         android:text="尺子"/>
 
+    <Button
+        android:id="@+id/btn_flip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Flip"/>
+
 </LinearLayout>

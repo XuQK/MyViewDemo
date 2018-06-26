@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button mButtonLike;
     private Button mButtonRuler;
+    private Button mButtonFlip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         mButtonLike = findViewById(R.id.btn_like);
         mButtonRuler = findViewById(R.id.btn_ruler);
+        mButtonFlip = findViewById(R.id.btn_flip);
 
         mButtonLike.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RulerActivity.class));
+            }
+        });
+
+        mButtonFlip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FlipboardActivity.class));
             }
         });
         
